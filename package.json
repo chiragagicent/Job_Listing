@@ -1,14 +1,14 @@
-
  {
   "name": "joblist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
- "scripts": {
-    "start": "npm run server",
-    "server": "json-server --watch src/jobs.json --port 8000",
-    "build": "vite build",
-    "dev": "vite"
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run lint && vite build --mode production",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "server": "json-server --watch src/jobs.json --port 8000"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
@@ -34,3 +34,6 @@
     "vite": "^5.2.0"
   }
 }
+
+
+ 
