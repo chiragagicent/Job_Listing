@@ -1,13 +1,14 @@
-{
+
+ {
   "name": "joblist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+ "scripts": {
     "start": "npm run server",
     "server": "json-server --watch src/jobs.json --port 8000",
     "build": "vite build",
-    "dev": "concurrently \"npm run server\" \"npm run start\""
+    "dev": "vite"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
